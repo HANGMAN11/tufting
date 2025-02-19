@@ -405,6 +405,7 @@ form button:hover{
   flex-wrap: wrap;
   gap: 2rem;      
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footer__info {
@@ -498,9 +499,21 @@ form button:hover{
     text-align: center;
 
   }
+
+  .footer__social{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (width < 728px){
+  .nav__actions{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   nav{
     position: fixed;
     top: 0;
@@ -549,5 +562,18 @@ form button:hover{
     display: flex;
     flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__info,
+  .footer__links,
+  .footer__social {
+    min-width: unset; 
+    flex: 1 1 auto;
   }
 }
