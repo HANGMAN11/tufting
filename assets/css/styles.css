@@ -593,3 +593,12 @@ form button:hover{
     display: none !important;
   }
 }
+
+@media (width < 342px){
+  .nav__logo a{
+    font-size: 1rem;
+  }
+  .nav__actions button{
+    font-size: 0.7rem;
+  }
+}
