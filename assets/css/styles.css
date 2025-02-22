@@ -412,7 +412,6 @@ form button:hover{
   flex-wrap: wrap;
   gap: 2rem;      
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .footer__info {
@@ -435,8 +434,8 @@ form button:hover{
   min-width: 200px;
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 .footer__links li a {
   text-decoration: none;
@@ -453,6 +452,7 @@ form button:hover{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
 }
 .footer__social p {
   margin-bottom: 0.5rem;

@@ -1,3 +1,4 @@
+
 const menuBtn = document.getElementById("menu__btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = document.getElementById("i")
@@ -74,3 +75,32 @@ new Swiper('.card-wrapper', {
     }
   });
   
+document.addEventListener("DOMContentLoaded", ()=>{
+    const buttons = document.querySelectorAll(".nav__actions button");
+    const elements = document.querySelectorAll("[data-translate]");
+
+    function setLanguage(lang){
+        elements.forEach(el =>{
+            const key = el.getAttribute("data-translate");
+            if(translations[lang][key]){
+                el.textContent = translations[lang][key];
+            }
+        });
+        document.querySelector("input[name='name']").placeholder = translations[lang]["namePlaceholder"];
+        document.querySelector("input[name='email']").placeholder = translations[lang]["emailPlaceholder"];
+        document.querySelector("textarea[name='message']").placeholder = translations[lang]["messagePlaceholder"];
+
+        localStorage.setItem("selectedLanguage", lang);
+    }
+
+    buttons.forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+            const lang = btn.classList.contains("german") ? "de" : 
+            btn.classList.contains("english") ? "en" : "ru";
+            setLanguage(lang)
+        });
+    });
+
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "de";
+    setLanguage(savedLanguage)
+})
