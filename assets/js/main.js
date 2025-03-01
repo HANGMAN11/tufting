@@ -104,3 +104,29 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const savedLanguage = localStorage.getItem("selectedLanguage") || "de";
     setLanguage(savedLanguage)
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    function updateCardTitles(language) {
+        document.querySelectorAll(".card-title").forEach(title => {
+            const id = title.getAttribute("data-translate");
+            if (id) {
+                title.textContent = `${translations[language]["option"]} ${id}`;
+            }
+        });
+    }
+
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "de";
+    updateCardTitles(savedLanguage);
+
+    document.querySelector(".german").addEventListener("click", function () {
+        updateCardTitles("de");
+    });
+
+    document.querySelector(".russian").addEventListener("click", function () {
+        updateCardTitles("ru");
+    });
+
+    document.querySelector(".english").addEventListener("click", function () {
+        updateCardTitles("en");
+    });
+});
