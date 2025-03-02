@@ -46,7 +46,10 @@ new Swiper('.card-wrapper', {
    
     loop: true,
     spaceBetween: 30,
-    // If we need pagination
+    autoplay: {
+        delay: 5000, 
+        disableOnInteraction: false, 
+      },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
