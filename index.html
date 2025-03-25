@@ -283,13 +283,13 @@
 
     <section class="contact__container" id="order">
         <div class="contact-wrapper">
-            <form action="" class="contact__left">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact__left">
                 <h2 class="section__header" data-translate="contactTitle"></h2>
                 <p class="section__subheader" data-translate="contactSubtitle"></p>
                 <hr>
+                <input type="hidden" name="access_key" value="c8f42a98-d637-46a0-9986-dcaca93d568f">
                 <input type="text" class="contact-inputs" id="name" name="name" placeholder="Name" required>
                 <input type="email" class="contact-inputs" id="email" name="email" placeholder="Email" required>
-                <input type="text" class="contact-inputs" id="subject" name="subject" placeholder="Option" required>
                 <textarea name="message" placeholder="Your Message" id="message" class="contact-inputs" required></textarea>
                 <button type="submit" onclick="sendEmail()" data-translate="sendButton"></button>
             </form>

@@ -134,15 +134,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function sendEmail(){
-    let parms = {
-        name: document.getElementById('name').value,
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        message: document.getElementById('message').value,
-        subject: document.getElementById('subject').value,
-        email: document.getElementById('email').value
-    }
-    console.log("Отправляемые данные:", parms);
-
-    emailjs.send("service_0ktqifp", "template_t35qczd", parms)
-}
