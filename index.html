@@ -6,6 +6,19 @@
     <title>Tufting</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "E2a69dCDdYrEDUNFc",
+      });
+   })();
+</script>
+
+
 </head>
 <body>
     <header class="header" id="home">
@@ -175,6 +188,49 @@
                             <p class="price-info" data-translate="price_info"></p>
                         </a>
                     </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="#order" class="card-link">
+                            <img src="assets/css/img/new1.jpg" class="card-image" alt="">
+                            <h2 class="card-title" data-translate="18"></h2>
+                            <p class="price-info" data-translate="price_info"></p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#order" class="card-link">
+                            <img src="assets/css/img/new2.jpg" class="card-image" alt="">
+                            <h2 class="card-title" data-translate="19"></h2>
+                            <p class="price-info" data-translate="price_info"></p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#order" class="card-link">
+                            <img src="assets/css/img/new3.jpg" class="card-image" alt="">
+                            <h2 class="card-title" data-translate="20"></h2>
+                            <p class="price-info" data-translate="price_info"></p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#order" class="card-link">
+                            <img src="assets/css/img/new4.jpg" class="card-image" alt="">
+                            <h2 class="card-title" data-translate="21"></h2>
+                            <p class="price-info" data-translate="price_info"></p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#order" class="card-link">
+                            <img src="assets/css/img/new5.jpg" class="card-image" alt="">
+                            <h2 class="card-title" data-translate="22"></h2>
+                            <p class="price-info" data-translate="price_info"></p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#order" class="card-link">
+                            <img src="assets/css/img/new6.jpg" class="card-image" alt="">
+                            <h2 class="card-title" data-translate="23"></h2>
+                            <p class="price-info" data-translate="price_info"></p>
+                        </a>
+                    </li>
                 </ul>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
@@ -231,10 +287,11 @@
                 <h2 class="section__header" data-translate="contactTitle"></h2>
                 <p class="section__subheader" data-translate="contactSubtitle"></p>
                 <hr>
-                <input type="text" class="contact-inputs" name="name" placeholder="Name" required>
-                <input type="email" class="contact-inputs" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-                <button type="submit" data-translate="sendButton"></button>
+                <input type="text" class="contact-inputs" id="name" name="name" placeholder="Name" required>
+                <input type="email" class="contact-inputs" id="email" name="email" placeholder="Email" required>
+                <input type="text" class="contact-inputs" id="subject" name="subject" placeholder="Option" required>
+                <textarea name="message" placeholder="Your Message" id="message" class="contact-inputs" required></textarea>
+                <button type="submit" onclick="sendEmail()" data-translate="sendButton"></button>
             </form>
         </div>
     </section>
